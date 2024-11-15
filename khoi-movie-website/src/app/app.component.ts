@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,16 @@ import { MainPageComponent } from './main-page/main-page.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'khoi-movie-website';
   
+  isLoggedIn: boolean = false;
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.dataService.isLoggedIn$.subscribe(
+      (state) => (this.isLoggedIn = state)
+    );
+  }
+  
+
 }
