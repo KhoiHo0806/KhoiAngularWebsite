@@ -11,7 +11,9 @@
             <input type="text" class="search-bar" placeholder="Search...">
             <fa-icon [icon]="faMagnifyingGlass" class="search-bar-icon"></fa-icon>
         </div>
-        <button (click)="toggleLogin()" class="login-button">{{isLoggedIn? "Log out" : "Log in"}}</button>
+        <button (click)="isLoggedIn? logout() : showLoginForm()" class="login-button">
+            {{isLoggedIn? "Log out" : "Log in"}}
+        </button>
     </div>
 </div>
 

@@ -1,0 +1,7 @@
+<div class="login-form-dim-screen" (click)="closeLoginForm()">
+    <div class="login-form-container" (click)="$event.stopPropagation()">
+        <p (click)="closeLoginForm()">X</p>
+        <p>this is login form</p>
+        <button (click)="login(); closeLoginForm()">Login</button>
+    </div>
+</div>

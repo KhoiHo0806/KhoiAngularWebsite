@@ -2,15 +2,14 @@ import { Component } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-login-page',
+  selector: 'app-login-form',
   standalone: true,
   imports: [],
-  templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  templateUrl: './login-form.component.html',
+  styleUrl: './login-form.component.css'
 })
-export class LoginPageComponent {
-
-  isShowingLoginForm:boolean = false;
+export class LoginFormComponent {
+  isShowingLoginForm : boolean = false;
 
   constructor(private dataService: DataService) {}
 
@@ -20,7 +19,11 @@ export class LoginPageComponent {
     );
   }
 
-  showLoginForm(){
-    this.dataService.setIsShowingLoginForm(true)
+  closeLoginForm(){
+    this.dataService.setIsShowingLoginForm(false)
+  }
+
+  login(){
+    this.dataService.setLoginState(true)
   }
 }

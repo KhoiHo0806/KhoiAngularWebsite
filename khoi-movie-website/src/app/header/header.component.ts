@@ -12,6 +12,7 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 })
 export class HeaderComponent {
   isLoggedIn: boolean = false;
+  isShowingLoginForm: boolean = false;
 
   faMagnifyingGlass = faMagnifyingGlass;
 
@@ -21,9 +22,16 @@ export class HeaderComponent {
     this.dataService.isLoggedIn$.subscribe(
       (state) => (this.isLoggedIn = state)
     );
+    this.dataService.isShowingLoginForm$.subscribe(
+      (state) => (this.isShowingLoginForm = state)
+    );
   }
-  
-  toggleLogin() {
-    this.dataService.setLoginState(!this.isLoggedIn);
+
+  showLoginForm(){
+    this.dataService.setIsShowingLoginForm(true)
+  }
+
+  logout(){
+    this.dataService.setLoginState(false)
   }
 }
