@@ -1,0 +1,31 @@
+.landing-page-container{
+    background-image: url("/landingPageBackGround.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: calc(100vh - 60px);  /* subtract header height */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.landing-page-container .landing-page-text{
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.landing-page-container .landing-page-button{
+    border:none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.landing-page-container .landing-page-button:hover{
+    background-color: rgb(61, 59, 59);
+    color:white;
+}
