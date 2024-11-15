@@ -1,2 +1,18 @@
-<p>header works!</p>
-<button (click)="toggleLogin()">{{isLoggedIn? "Log out" : "Log in"}}</button>
+<div class="header-container">
+    <img src="logo.png" alt="logo" class="header-logo">
+    <ul class="header-navigation-buttons">
+        <li>Home</li>
+        <li>Genre</li>
+        <li>Nation</li>
+        <li>Year</li>
+    </ul>
+    <div class="search-bar-and-login">
+        <div class="search-bar-wrapper">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <fa-icon [icon]="faMagnifyingGlass" class="search-bar-icon"></fa-icon>
+        </div>
+        <button (click)="toggleLogin()" class="login-button">{{isLoggedIn? "Log out" : "Log in"}}</button>
+    </div>
+</div>
+
+

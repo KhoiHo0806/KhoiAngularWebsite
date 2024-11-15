@@ -1,0 +1,84 @@
+.header-container{
+    width: 100%;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.header-container .header-logo{
+    width: 100px;
+    height: 100%;
+}
+
+.header-container .header-navigation-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    
+}
+
+.header-container .header-navigation-buttons li{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.header-container .header-navigation-buttons li:hover{
+    background-color: white;
+    color:black;
+    transition: 0.5s;
+}
+
+.header-container .search-bar-and-login{
+    display: flex;
+    flex-direction: row;
+    margin-right: 60px;
+    gap: 10px;
+}
+
+.header-container .search-bar-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.header-container .search-bar-wrapper .search-bar{
+    width: 100%;
+    border-radius: 15px;
+    padding:10px;
+    outline: none;
+    border: none;
+}
+
+.header-container .search-bar-wrapper .search-bar-icon{
+    position: absolute;
+    top:25%;
+    right:10px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.header-container .login-button{
+    width: 100px;
+    height: 35px;
+    border-radius: 999px;
+    background: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+.header-container .login-button:hover{
+    color:black;
+    background-color: white;
+    transition: 0.5s;
+}
