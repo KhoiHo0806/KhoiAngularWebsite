@@ -31,7 +31,8 @@ export class HeaderComponent {
     this.dataService.setIsShowingLoginForm(true)
   }
 
-  logout(){
+  logout():void{
     this.dataService.setLoginState(false)
+    alert("You logged out!")
   }
 }

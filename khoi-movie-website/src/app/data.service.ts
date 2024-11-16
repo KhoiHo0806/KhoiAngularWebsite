@@ -6,6 +6,11 @@ import { BehaviorSubject, Observable } from 'rxjs'
 })
 export class DataService {
 
+  private mockUser={
+    username: "user",
+    password: "123456"
+  }
+
   private isLoggedInSubject = new BehaviorSubject<boolean>(false); //set log out as default state
   isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable(); //set as observable so other component can access
 
@@ -30,5 +35,12 @@ export class DataService {
   //get is showing login form
   getIsShowingLoginForm(){
     return this.isShowingLoginFormSubject.getValue();
+  }
+
+  authenUser(inputUserName:string, inputPassword:string){
+      return(
+        this.mockUser.username === inputUserName &&
+        this.mockUser.password == inputPassword
+      )
   }
 }

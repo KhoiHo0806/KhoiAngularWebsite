@@ -1,7 +1,21 @@
 <div class="login-form-dim-screen" (click)="closeLoginForm()">
     <div class="login-form-container" (click)="$event.stopPropagation()">
-        <p (click)="closeLoginForm()">X</p>
-        <p>this is login form</p>
-        <button (click)="login(); closeLoginForm()">Login</button>
+        <p (click)="closeLoginForm()" class="login-form-close-button">X</p>
+        <p class="login-form-header">Login</p>
+        <label for="username">User name</label>
+        <input type="text" 
+        id="username" 
+        class="login-username" 
+        [(ngModel)]="userName"
+        required>
+        <label for="passowrd">Password</label>
+        <input type="password" 
+        id="passowrd" 
+        class="login-passowrd" 
+        [(ngModel)]="password"
+        required>
+        <button (click)="login(); closeLoginForm()" class="login-form-button">Login</button>
+        <p>user name: user</p>
+        <p>password: 123456</p>
     </div>
 </div>
