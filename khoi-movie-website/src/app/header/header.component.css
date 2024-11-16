@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     width: 25%;
+    position:relative;
 }
 .header-container .header-navigation-buttons li:hover{
     background-color: white;
@@ -81,4 +82,31 @@
     color:black;
     background-color: white;
     transition: 0.5s;
+}
+
+.header-container .header-genre-list,.header-nation-list,.header-year-list{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    width: 100%;
+}
+
+.header-container .header-genre-list li,
+.header-container .header-nation-list li, 
+.header-container .header-year-list li{
+    color:black;
+    width: 100%;
+    height: 35px;
+}
+.header-container .header-genre-list li:hover,
+.header-container .header-nation-list li:hover,
+.header-container .header-year-list li:hover{
+    background-color: rgb(172, 182, 190);
+}
+
+.header-container .header-genre-button:hover .header-genre-list,
+.header-container .header-nation-button:hover .header-nation-list,
+.header-container .header-year-button:hover .header-year-list{
+    display:block;
 }
