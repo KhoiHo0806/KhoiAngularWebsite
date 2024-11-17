@@ -1,18 +1,23 @@
 <div class="main-page-container">
     <img src="#" alt="feature movie image" class="feature-movie-image">
     <p class="movie-list-topic">Toppic</p>
-    <div class="movie-list">
-        @for(movie of movieList ; track movie){
-            <div class="movie-item">
-                <div class="movie-poster-container">
-                    <img class="movie-poster" src={{movie.posterUrl}} alt="movie poster">
-                    <div class="overlay">
-                        <fa-icon [icon]="faPlay" class="movie-play-icon"></fa-icon>
+    <div class="movie-slider">
+        <fa-icon [icon]="faChevronLeft" class="slider-left-icon" (click)="moveLeft()"></fa-icon>
+        <div class="movie-list" [ngStyle]="{'transform': 'translateX(' + movieListTransformValue + 'px)'}">
+            @for(movie of movieList ; track movie){
+                <div class="movie-item">
+                    <div class="movie-poster-container">
+                        <img class="movie-poster" src={{movie.posterUrl}} alt="movie poster">
+                        <div class="overlay">
+                            <fa-icon [icon]="faPlay" class="movie-play-icon"></fa-icon>
+                        </div>
                     </div>
+                    <p class="movie-name">{{movie.title}}</p>
+                    <p class="movie-genre">{{movie.genre}}</p>
                 </div>
-                <p class="movie-name">{{movie.title}}</p>
-                <p class="movie-genre">{{movie.genre}}</p>
-            </div>
-        }    
+            }    
+        </div>
+        <fa-icon [icon]="faChevronRight" class="slider-right-icon" (click)="moveRight()"></fa-icon>
     </div>
+    <p [ngStyle]="{'color':'white'}">{{movieListTransformValue}}</p>
 </div>

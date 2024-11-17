@@ -84,7 +84,9 @@
     transition: 0.5s;
 }
 
-.header-container .header-genre-list,.header-nation-list,.header-year-list{
+.header-container .header-genre-list,
+.header-container .header-nation-list,
+.header-container .header-year-list{
     display: none;
     position: absolute;
     top: 100%;
