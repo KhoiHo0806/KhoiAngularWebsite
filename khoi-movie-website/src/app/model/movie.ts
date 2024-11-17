@@ -9,5 +9,6 @@ export interface Movie {
     duration: number; 
     synopsis: string; 
     posterUrl: string; 
+    coverImageUrl: string
     nation: string;
   }

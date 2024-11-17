@@ -24,6 +24,7 @@ export class DataService {
       duration: 148,
       synopsis: 'A thief who steals corporate secrets through dream-sharing technology is tasked with planting an idea.',
       posterUrl: 'https://th.bing.com/th/id/OIP.SDeJ32DZYc-p3O_6N1z2gAHaKz?rs=1&pid=ImgDetMain',
+      coverImageUrl:'http://images2.fanpop.com/image/photos/12300000/Inception-Wallpaper-inception-2010-12396931-1440-900.jpg',
       nation: "USA"
     },
     {
@@ -37,6 +38,7 @@ export class DataService {
       duration: 136,
       synopsis: 'A hacker discovers the shocking truth about his reality and his role in the war against its controllers.',
       posterUrl: 'https://th.bing.com/th/id/OIP.AyEukC9azVgBTDl6HcQmngHaK3?rs=1&pid=ImgDetMain',
+      coverImageUrl:'https://i.ytimg.com/vi/EweuTOz7g-g/maxresdefault.jpg',
       nation: "USA"
     },
     {
@@ -50,6 +52,7 @@ export class DataService {
       duration: 152,
       synopsis: 'When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.',
       posterUrl: 'https://th.bing.com/th?id=OIP.fHpPU6o1tvzQqqBoUR3mLAHaKw&w=207&h=301&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      coverImageUrl:'https://images4.alphacoders.com/573/57394.jpg',
       nation: "USA"
     },
     {
@@ -63,6 +66,7 @@ export class DataService {
       duration: 169,
       synopsis: 'A team of explorers must travel beyond this galaxy to discover whether mankind has a future among the stars.',
       posterUrl: 'https://th.bing.com/th?id=OIP.8A707ygGKj_-MsgM-gOchgHaKe&w=210&h=297&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      coverImageUrl:'https://wallpapercave.com/wp/wp1818033.jpg',
       nation: "USA"
     },
     {
@@ -76,6 +80,7 @@ export class DataService {
       duration: 162,
       synopsis: 'A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.',
       posterUrl: 'https://th.bing.com/th?id=OIP.NqFYgMiuHbc_byT2CPCHAgHaJ8&w=215&h=289&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      coverImageUrl:'http://getwallpapers.com/wallpaper/full/c/c/8/96834.jpg',
       nation: "USA"
     },
     {
@@ -89,6 +94,7 @@ export class DataService {
       duration: 127,
       synopsis: 'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run wild.',
       posterUrl: 'https://th.bing.com/th?id=OIP.qFd8vzvz5DFKs8jFJwI4uAHaLH&w=204&h=306&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      coverImageUrl:'https://wallpapers.com/images/featured/jurassic-park-pictures-ftkhwejbc5yooyrr.jpg',
       nation: "USA"
     },
     {
@@ -102,6 +108,7 @@ export class DataService {
       duration: 121,
       synopsis: 'A group of intergalactic criminals must pull together to stop a fanatical warrior from taking control of the universe.',
       posterUrl: 'https://th.bing.com/th?id=OIP.pYZChZzBUT3q4EBoDXFA-QHaK-&w=205&h=304&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      coverImageUrl:'http://www.moviehdwallpapers.com/wp-content/uploads/2013/02/Inception-2010-HD-Wallpapers.jpg',
       nation: "USA"
     },
     {
@@ -115,6 +122,7 @@ export class DataService {
       duration: 88,
       synopsis: 'A lion cub crown prince is cast out of his pride and leaves his kingdom only to learn the true meaning of responsibility and bravery.',
       posterUrl: 'https://th.bing.com/th?id=OIP.9yxvUHiTWP-sEgbvczFKYQAAAA&w=204&h=306&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      coverImageUrl:'http://www.moviehdwallpapers.com/wp-content/uploads/2013/02/Inception-2010-HD-Wallpapers.jpg',
       nation: "USA"
     }
   ];

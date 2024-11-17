@@ -1,11 +1,13 @@
 <div class="main-page-container">
-    <img src="#" alt="feature movie image" class="feature-movie-image">
+    <img src={{featuredMovie?.coverImageUrl}} 
+    alt="feature movie image" 
+    class="feature-movie-image">
     <p class="movie-list-topic">Toppic</p>
     <div class="movie-slider">
-        <fa-icon [icon]="faChevronLeft" class="slider-left-icon" (click)="moveLeft()"></fa-icon>
+        <fa-icon [icon]="faChevronLeft" class="slider-left-icon" (click)="moveLeft(); getFeaturedMovie()" ></fa-icon>
         <div class="movie-list" [ngStyle]="{'transform': 'translateX(' + movieListTransformValue + 'px)'}">
             @for(movie of movieList ; track movie){
-                <div class="movie-item">
+                <div class="movie-item" (click)="testClick()">
                     <div class="movie-poster-container">
                         <img class="movie-poster" src={{movie.posterUrl}} alt="movie poster">
                         <div class="overlay">
@@ -17,7 +19,6 @@
                 </div>
             }    
         </div>
-        <fa-icon [icon]="faChevronRight" class="slider-right-icon" (click)="moveRight()"></fa-icon>
+        <fa-icon [icon]="faChevronRight" class="slider-right-icon" (click)="moveRight(); getFeaturedMovie()"></fa-icon>
     </div>
-    <p [ngStyle]="{'color':'white'}">{{movieListTransformValue}}</p>
 </div>
