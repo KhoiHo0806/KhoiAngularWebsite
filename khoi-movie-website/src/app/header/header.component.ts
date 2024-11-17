@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../service/data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
@@ -11,10 +11,11 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  //font awesome icons
+  faMagnifyingGlass = faMagnifyingGlass;
+
   isLoggedIn: boolean = false;
   isShowingLoginForm: boolean = false;
-
-  faMagnifyingGlass = faMagnifyingGlass;
 
   constructor(private dataService: DataService) {}
 
