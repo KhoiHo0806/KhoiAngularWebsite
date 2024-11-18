@@ -43,7 +43,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 100;
 }
 
 .main-page-container .slider-left-icon{
@@ -60,6 +60,9 @@
     margin: 0 10px;
     background-color: rgb(38, 38, 38);
     box-sizing: border-box;
+}
+.main-page-container .movie-item.high-light-movie{
+    border: 2px solid #1ecbe1;
 }
 
 .main-page-container .movie-item .movie-poster-container{
@@ -133,47 +136,65 @@
     width: 100%;
     height: 99%;
     object-fit: cover;
-}
-.feature-movie-image.first-load {
-    animation: fadeIn 1s ease-in-out;
-  }
-.feature-movie-image.slide-in-right {
-    animation: slideInRight 0.5s forwards;
-  }
-  
-.feature-movie-image.slide-in-left {
-    animation: slideInLeft 0.5s forwards;
+    opacity: 0.7;
 }
 
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.main-page-container .feature-movie-info{
+    height: 40%;
+    position: absolute;
+    top: 20px;
+    width: 80%;
+    color: white;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.main-page-container .feature-movie-info .feature-movie-title{
+    font-size: 35px;
+    font-weight: bold;
 }
+
+.main-page-container .feature-movie-info .feature-movie-rating,
+.main-page-container .feature-movie-info .feature-movie-duration{
+    font-size: 20px;
+    color:rgb(210, 210, 210);
+}
+
+.main-page-container .feature-movie-info .feature-movie-watch-button{
+    height: 50px;
+    width: 100px;
+    border-radius: 999px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    transition: 0.5s;
+}
+.main-page-container .feature-movie-info .feature-movie-watch-button:hover{
+    background-color: white;
+    color:black;
+}
+
+.main-page-container .feature-movie-info .feature-movie-text-area{
+    width: 50%;
+    height: 60%;
+    overflow: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+.main-page-container .feature-movie-info .feature-movie-text-area::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+
+  .main-page-container .feature-movie-info .feature-movie-description{
+    font-size: 16px;
+    line-height: 20px;
+  }
 

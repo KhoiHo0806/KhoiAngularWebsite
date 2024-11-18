@@ -1,13 +1,27 @@
 <div class="main-page-container">
-    <img src={{featuredMovie?.coverImageUrl}} 
+    <img [src]='featuredMovie?.coverImageUrl'
     alt="feature movie image" 
     class="feature-movie-image">
+    <div class="feature-movie-info">
+        <p class="feature-movie-title">{{featuredMovie?.title + ' ('+ featuredMovie?.releaseYear + ')'}}</p>
+        <p class="feature-movie-rating">{{'Rating: ' + featuredMovie?.rating}}</p>
+        <p class="feature-movie-duration">{{'Duration: ' + featuredMovie?.duration + 'minutes'}}</p>
+        <button class="feature-movie-watch-button">
+            <fa-icon [icon]="faPlay" class="feature-movie-play-icon"></fa-icon>  Watch
+        </button>
+        <div class="feature-movie-text-area">
+            <p class="feature-movie-description">{{featuredMovie?.synopsis}}</p>
+        </div>
+        
+    </div>
     <p class="movie-list-topic">Toppic</p>
     <div class="movie-slider">
-        <fa-icon [icon]="faChevronLeft" class="slider-left-icon" (click)="moveLeft(); getFeaturedMovie()" ></fa-icon>
+        <fa-icon [icon]="faChevronLeft" class="slider-left-icon" (click)="moveLeft()" ></fa-icon>
         <div class="movie-list" [ngStyle]="{'transform': 'translateX(' + movieListTransformValue + 'px)'}">
             @for(movie of movieList ; track movie){
-                <div class="movie-item" (click)="testClick()">
+                <div class="movie-item" 
+                (click)="getFeaturedMovie(movie)" 
+                [class.high-light-movie]='movie === featuredMovie'>
                     <div class="movie-poster-container">
                         <img class="movie-poster" src={{movie.posterUrl}} alt="movie poster">
                         <div class="overlay">
@@ -19,6 +33,6 @@
                 </div>
             }    
         </div>
-        <fa-icon [icon]="faChevronRight" class="slider-right-icon" (click)="moveRight(); getFeaturedMovie()"></fa-icon>
+        <fa-icon [icon]="faChevronRight" class="slider-right-icon" (click)="moveRight()"></fa-icon>
     </div>
 </div>
