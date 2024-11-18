@@ -32,7 +32,8 @@
             <input type="text" class="search-bar" placeholder="Search...">
             <fa-icon [icon]="faMagnifyingGlass" class="search-bar-icon"></fa-icon>
         </div>
-        <button (click)="isLoggedIn? logout() : showLoginForm()" class="login-button">
+        <button (click)="isLoggedIn? logout() : showLoginForm()" class="login-button"
+        [routerLink]="isLoggedIn ? '/' : null">
             {{isLoggedIn? "Log out" : "Log in"}}
         </button>
     </div>

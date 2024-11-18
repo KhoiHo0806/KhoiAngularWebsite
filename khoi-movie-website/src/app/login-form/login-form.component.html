@@ -14,7 +14,11 @@
         class="login-passowrd" 
         [(ngModel)]="password"
         required>
-        <button (click)="login(); closeLoginForm()" class="login-form-button">Login</button>
+        <button (click)="login(); closeLoginForm()" 
+        class="login-form-button" 
+        routerLink="/main-page">
+            Login
+        </button>
         <p>user name: user</p>
         <p>password: 123456</p>
     </div>

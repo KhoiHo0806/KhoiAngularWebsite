@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

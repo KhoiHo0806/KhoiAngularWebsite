@@ -92,6 +92,7 @@
     top: 100%;
     background-color: white;
     width: 100%;
+    z-index: 100;
 }
 
 .header-container .header-genre-list li,

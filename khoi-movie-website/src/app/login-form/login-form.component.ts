@@ -1,11 +1,13 @@
 import { Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../service/data.service';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css'
 })
@@ -28,12 +30,12 @@ export class LoginFormComponent {
 
   login(){
     let isRealUser = this.dataService.authenUser(this.userName,this.password)
-    console.log("username:"+this.userName)
-    console.log("pwd:"+this.password)
     if(isRealUser){
       this.dataService.setLoginState(true)
+      console.log("login state: "+ this.dataService.getLoginState())
       alert("Login successfully")
     }else{
+      console.log("login state: "+ this.dataService.getLoginState())
       alert("Wrong user name of password!")
     }
     
