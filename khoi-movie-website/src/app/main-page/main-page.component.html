@@ -6,7 +6,7 @@
         <p class="feature-movie-title">{{featuredMovie?.title + ' ('+ featuredMovie?.releaseYear + ')'}}</p>
         <p class="feature-movie-rating">{{'Rating: ' + featuredMovie?.rating}}</p>
         <p class="feature-movie-duration">{{'Duration: ' + featuredMovie?.duration + ' minutes'}}</p>
-        <button class="feature-movie-watch-button">
+        <button class="feature-movie-watch-button" [routerLink]="['/watch-page', featuredMovie?.id]">
             <fa-icon [icon]="faPlay" class="feature-movie-play-icon"></fa-icon>  Watch
         </button>
         <div class="feature-movie-text-area">
@@ -21,7 +21,8 @@
             @for(movie of movieList ; track movie){
                 <div class="movie-item" 
                 (click)="getFeaturedMovie(movie)" 
-                [class.high-light-movie]='movie === featuredMovie'>
+                [class.high-light-movie]='movie === featuredMovie'
+                [routerLink]="movie === featuredMovie ? ['/watch-page', featuredMovie?.id] : []">
                     <div class="movie-poster-container">
                         <img class="movie-poster" src={{movie.posterUrl}} alt="movie poster">
                         <div class="overlay">

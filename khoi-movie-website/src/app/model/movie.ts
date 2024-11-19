@@ -11,4 +11,5 @@ export interface Movie {
     posterUrl: string; 
     coverImageUrl: string
     nation: string;
+    movieUrl: string;
   }

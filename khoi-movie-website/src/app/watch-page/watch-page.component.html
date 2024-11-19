@@ -1,1 +1,24 @@
-<p>watch-page works!</p>
+<div class="watch-page-container">
+    <video 
+    class="movie-player"
+    controls 
+    poster="http://images2.fanpop.com/image/photos/12300000/Inception-Wallpaper-inception-2010-12396931-1440-900.jpg">
+        <source src={{movie?.movieUrl}} type="video/mp4">
+        Your browser does not support this function
+    </video>
+    <div class="movie-information">
+        <p class="movie-title">{{movie?.title}}</p>
+        <div class="movie-short-info">
+            <p class="movie-duration">{{movie?.duration + " minutes"}}</p>
+            <p class="movie-year">{{movie?.releaseYear}}</p>
+            <p class="movie-nation">{{movie?.nation}}</p>
+        </div>
+        <p class="movie-rating">{{'Rating: ' + movie?.rating}}</p>
+        <p class="movie-genre">{{'Genre: ' + movie?.genre}}</p>
+        <p class="movie-director">{{'Director: ' + movie?.director}}</p>
+        <p class="movie-cast">{{'Casts: ' + movie?.cast}}</p>
+        <p class="movie-synopsis">{{movie?.synopsis}}</p>
+    </div>
+    
+</div>
+
