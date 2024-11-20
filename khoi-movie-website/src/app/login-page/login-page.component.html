@@ -7,6 +7,6 @@
         Stay updated with trailers, news, and upcoming releases, and join a community of passionate film enthusiasts. 
         Dive in and start discovering your next favorite movie today!
     </h1>
-    <button class="landing-page-button" (click)="showLoginForm()">Login to use our full services</button>
+    <button class="landing-page-button" (click)="handleLogin()">{{loginState ? 'Go to home page' : 'Login to use our full services'}}</button>
 </div>
 

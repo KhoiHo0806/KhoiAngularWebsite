@@ -1,0 +1,106 @@
+.filter-movie-page-container{
+    height: calc(100vh - 60px);
+    background-color: rgb(35, 35, 35);
+    color:white;
+    padding: 20px 30px;
+    overflow: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+
+.filter-movie-page-container::-webkit-scrollbar{
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.filter-movie-page-container .no-movie-text{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20%;
+}
+
+.filter-movie-page-container .filter-option{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-movie-page-container .movie-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* Optional: Adds spacing between items */
+    margin: 0 auto;
+}
+
+.filter-movie-page-container .movie-item{
+    height: 100%;
+    background-color: rgb(38, 38, 38);
+    box-sizing: border-box;
+    height: 300px;
+}
+
+.filter-movie-page-container .movie-poster-container{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+.filter-movie-page-container .movie-poster{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+.filter-movie-page-container .movie-item:hover .movie-poster{
+    transform: scale(1.1);
+}
+
+.filter-movie-page-container .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.filter-movie-page-container .movie-item:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+ }
+
+ .filter-movie-page-container .movie-play-icon{
+    color: rgb(78, 128, 193);
+    font-size: 25px;
+ }
+
+ .filter-movie-page-container .movie-name{
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: calc(100% - 10px); 
+    margin: 3px 5px;
+    box-sizing: border-box; 
+    cursor: default;
+ }
+
+ .filter-movie-page-container .movie-genre{
+    color:rgb(157, 157, 157);
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: calc(100% - 10px); 
+    margin: 0px 5px;
+    box-sizing: border-box; 
+    cursor: default;
+ }

@@ -1,0 +1,24 @@
+<div class="filter-movie-page-container">
+    <p class="filter-option">{{filterOption +': ' + filterOptionName}}</p>
+    @if(filteredMovieList !== null){
+        <div class="movie-list">
+            @for(movie of filteredMovieList ; track movie){
+                <div class="movie-item"  
+                [routerLink]="['/watch-page', movie.id]">
+                    <div class="movie-poster-container">
+                        <img class="movie-poster" src={{movie.posterUrl}} alt="movie poster">
+                        <div class="overlay">
+                            <fa-icon [icon]="faPlay" class="movie-play-icon"></fa-icon>
+                        </div>
+                    </div>
+                    <p class="movie-name">{{movie.title}}</p>
+                    <p class="movie-genre">{{movie.genre}}</p>
+                </div>
+            }    
+        </div>
+        
+    }
+    @else{
+        <p class="no-movie-text">No movie in this category</p>
+    }
+</div>
